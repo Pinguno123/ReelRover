@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recursos/css/main.css">
+    <link rel="stylesheet" href="recursos/css/index.css">
+    <link rel="icon" href="recursos/img/Diseño-sin-título.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>ReelRover</title>
+</head>
+<body>
+    <div id="blur-screen"></div>
+    <header>
+        <section id="logo"><img src="https://fontmeme.com/permalink/240414/399c0524b4091c49b3177bef356c4510.png" alt="netflix-font"></section>
+        <section id="links">
+            <select name="idiom" id="idiom">
+                <option value="espaniol" selected>Español</option>
+                <option value="english">English</option>
+            </select>
+            <a href="javascript:void" onclick="closeSession()">Cerrar sesión</a>
+    </section>
+    </header>
+    <main>
+        <section id="search-bar">
+            <input type="search" name="search" id="search-input">
+            <button type="submit" id="search-button"><img src="recursos/img/lupa.jpg" alt="lupa"></button>
+        </section>
+        <div id="contenido-principal">
+            <section>
+                <p>Recomendados</p>
+                <div id="slider1" class="slider">
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado1.jpg" alt="Imagen de recomendados" class="verde img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado2.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado3.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado4.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado5.jpg" alt="Imagen de recomendados" class="verde img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado6.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado7.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                    <div class="previewS1">
+                        <img src="recursos/img/miniaturas/recomendado8.jpg" alt="Imagen de recomendados" class="img">
+                    </div>
+                </div>
+                <button class="slider-button izquierda-button" id="botonSlider1"><</button>
+                <button class="slider-button derecha-button" id="boton1Slider1">></button>
+            </section>
+            <section>
+                <p>Categorias interesantes</p>
+                <div id="slider2" class="slider">
+                    <img src="" alt="Imagen de categorias" class="verde"><img src="" alt="Imagen de categorias"><img src="" alt="Imagen de categorias"><img src="" alt="Imagen de categorias">
+                </div>                
+                <button class="slider-button izquierda-button" onclick="moverIzquierda()"><</button>
+                <button class="slider-button derecha-button" onclick="moverDerecha()">></button>                     
+            </section>
+            <section>
+                <p>Vistos recientemente</p>
+                <div id="slider1" class="slider">
+                    <img src="" alt="Imagen de recientemente" class="verde"><img src="" alt="Imagen de recientemente"><img src="" alt="Imagen de recientemente"><img src="" alt="Imagen de recientemente">
+                </div>
+                <button class="slider-button izquierda-button" onclick="moverIzquierda()"><</button>
+                <button class="slider-button derecha-button" onclick="moverDerecha()">></button>          
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>®ReelRover 2024</p>
+    </footer>
+    <script src="js/idiom.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/toastify.js"></script>    
+    <script src="js/session.js"></script>
+    <script src="js/change.js"></script>
+</body>
+</html>

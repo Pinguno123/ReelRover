@@ -1,0 +1,140 @@
+body {
+    max-width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+#search-bar {
+    border: var(--stroke);
+    background-color: transparent;
+    color: var(--text);
+    position: relative;
+    border: 1px solid var(--stroke);
+    width: 425px;
+    height: 40px;
+    margin: 0 70px;
+    margin-top: 40px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar input {
+    background-color: transparent;
+    color: var(--text);
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid var(--stroke);
+}
+
+#search-button {
+    width: 30%;
+    height: 100%;
+    background-color: var(--secondary);
+    border: none;
+    cursor: pointer;
+}
+
+#search-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: var(--text);
+}
+
+#contenido-principal {
+    width: 100%;
+}
+
+#contenido-principal section {
+    
+    margin: 30px 0px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+#contenido-principal :first-child {
+    margin: 0;
+}
+
+#contenido-principal p {
+    padding-left: 10px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: auto;   
+    width: 1200px;
+    overflow: hidden;
+}
+
+.previewS1 {
+    width: 290px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.slider img {
+    min-width: 290px;
+    object-fit: cover;
+    object-position: center bottom;
+    height: 200px;
+    cursor: pointer;
+}
+
+.slider-button {
+    transition: .5s ease;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--stroke);
+    color: var(--text);
+    padding: 10px;
+}
+
+.slider-button:hover {
+    transition: .5s ease;
+    background-color: var(--stroke);
+    color: var(--background);
+}
+
+.izquierda-button {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.derecha-button {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: var(--background);
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    padding-right: 20px;
+}
