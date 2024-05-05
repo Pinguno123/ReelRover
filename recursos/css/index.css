@@ -1,6 +1,7 @@
 body {
     max-width: 100%;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -41,6 +42,7 @@ main {
     background-color: var(--secondary);
     border: none;
     cursor: pointer;
+    position: relative;
 }
 
 #search-button img {
@@ -50,84 +52,77 @@ main {
     color: var(--text);
 }
 
+#resultados {
+    width: 425px;
+    min-height: 100px;
+    border: 1px solid var(--stroke);
+    height: auto;
+    position: absolute;
+    left: -.9px;
+    top: 100%;
+    z-index: 4;
+    background-color: var(--background);
+}
+
+.d-none {
+    display: none;
+}
+
 #contenido-principal {
     width: 100%;
+    height: auto;
 }
 
 #contenido-principal section {
-    
-    margin: 30px 0px;
-    height: 300px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    position: relative;
+    height: 300px;
+    margin: 50px 0;
 }
 
 #contenido-principal :first-child {
     margin: 0;
 }
 
-#contenido-principal p {
-    padding-left: 10px;
+#contenido-principal .seccion {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
 }
 
-.slider {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: auto;   
-    width: 1200px;
-    overflow: hidden;
+.swiper {
+    width: 95%;
+    height: 250px;
 }
 
-.previewS1 {
-    width: 290px;
-    height: 200px;
+.swiper-slide {
+    position: relative;
     cursor: pointer;
+    transition: width 0.3s, height 0.3s;
 }
 
-.slider img {
-    min-width: 290px;
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center bottom;
-    height: 200px;
-    cursor: pointer;
+    position: relative;
+    transition: opacity 0.3s;
+    z-index: 2;
 }
 
-.slider-button {
-    transition: .5s ease;
+.swiper-slide video {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid var(--stroke);
-    color: var(--text);
-    padding: 10px;
-}
-
-.slider-button:hover {
-    transition: .5s ease;
-    background-color: var(--stroke);
-    color: var(--background);
-}
-
-.izquierda-button {
+    /* Posición absoluta para superponer el video */
     top: 0;
-    bottom: 0;
     left: 0;
-    margin: auto;
-    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-.derecha-button {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    margin-right: 10px;
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--accent) !important;
 }
 
 footer {

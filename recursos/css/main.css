@@ -73,7 +73,7 @@ header {
     color: var(--text);
 }
 
-#links a {
+#closeButton {
     border-radius: 2px;
 
     background-color: var(--secondary);

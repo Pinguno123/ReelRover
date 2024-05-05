@@ -1,0 +1,58 @@
+[
+{
+    "nombre": "Iron Man",
+    "duración": "2h 6m",
+    "director": "Jon Favreau",
+    "categoría": "acción",
+    "recurso": "recursos/videos/video.mp4"
+},
+{
+    "nombre": "Iron Man II",
+    "duración": "2h 5m",
+    "director": "Jon Favreau",
+    "categoría": "acción",
+    "recurso": "recursos/videos/ironman2.mp4"
+},
+{
+    "nombre": "Iron Man III",
+    "duración": "2h 10m",
+    "director": "Shane Black",
+    "categoría": "acción",
+    "recurso": "recursos/videos/ironman3.mp4"
+},
+{
+    "nombre": "Avatar",
+    "duración": "2h 42m",
+    "director": "James Cameron",
+    "categoría": "acción",
+    "recurso": "recursos/videos/avatar.mp4"
+},
+{
+    "nombre": "Deadpool",
+    "duración": "1h 48m",
+    "director": "Tim Miller",
+    "categoría": "acción",
+    "recurso": "recursos/videos/deadpool.mp4"
+},
+{
+    "nombre": "Sonic la pelicula",
+    "duración": "1h 39m",
+    "director": "Jeff Fowler",
+    "categoría": "acción",
+    "recurso": "recursos/videos/sonic.mp4"
+},
+{
+    "nombre": "Jurassic Park III",
+    "duración": "1h 32m",
+    "director": "Joe Johnston",
+    "categoría": "acción",
+    "recurso": "recursos/videos/jurasticpark3.mp4"
+},
+{
+    "nombre": "Jurassic World",
+    "duración": "2h 4m",
+    "director": "Colin Trevorrow",
+    "categoría": "acción",
+    "recurso": "recursos/videos/jurasticworld.mp4"
+}
+]

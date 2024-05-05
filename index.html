@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>ReelRover</title>
 </head>
 <body>
@@ -21,71 +22,146 @@
                 <option value="espaniol" selected>Español</option>
                 <option value="english">English</option>
             </select>
-            <a href="javascript:void" onclick="closeSession()">Cerrar sesión</a>
+            <a href="javascript:void" onclick="closeSession()" id="closeButton">Cerrar sesión</a>
     </section>
     </header>
     <main>
         <section id="search-bar">
             <input type="search" name="search" id="search-input">
             <button type="submit" id="search-button"><img src="recursos/img/lupa.jpg" alt="lupa"></button>
+            <div id="resultados" class="d-none"></div>
         </section>
         <div id="contenido-principal">
             <section>
-                <p>Recomendados</p>
-                <div id="slider1" class="slider">
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado1.jpg" alt="Imagen de recomendados" class="verde img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado2.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado3.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado4.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado5.jpg" alt="Imagen de recomendados" class="verde img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado6.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado7.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
-                    <div class="previewS1">
-                        <img src="recursos/img/miniaturas/recomendado8.jpg" alt="Imagen de recomendados" class="img">
-                    </div>
+                <div class="seccion">
+                    <p>Recomendados</p>
                 </div>
-                <button class="slider-button izquierda-button" id="botonSlider1"><</button>
-                <button class="slider-button derecha-button" id="boton1Slider1">></button>
-            </section>
-            <section>
-                <p>Categorias interesantes</p>
-                <div id="slider2" class="slider">
-                    <img src="" alt="Imagen de categorias" class="verde"><img src="" alt="Imagen de categorias"><img src="" alt="Imagen de categorias"><img src="" alt="Imagen de categorias">
-                </div>                
-                <button class="slider-button izquierda-button" onclick="moverIzquierda()"><</button>
-                <button class="slider-button derecha-button" onclick="moverDerecha()">></button>                     
-            </section>
-            <section>
-                <p>Vistos recientemente</p>
-                <div id="slider1" class="slider">
-                    <img src="" alt="Imagen de recientemente" class="verde"><img src="" alt="Imagen de recientemente"><img src="" alt="Imagen de recientemente"><img src="" alt="Imagen de recientemente">
+                <div class="swiper Slider1">
+                    <div class="swiper-wrapper" id="recomendado1">
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado1.jpg" id="recomendado1" alt="">
+                            <video src="recursos/videos/video.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado2.jpg" alt="">
+                            <video src="recursos/videos/avatar.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado3.jpg" alt="">
+                            <video src="recursos/videos/deadpool.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado4.jpg" alt="">
+                            <video src="recursos/videos/jurasticpark3.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado5.jpg" alt="">
+                            <video src="recursos/videos/ironman2.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado6.jpg" alt="">
+                            <video src="recursos/videos/ironman3.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado7.jpg" alt="">
+                            <video src="recursos/videos/jurasticworld.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/recomendado8.jpg" alt="">
+                            <video src="recursos/videos/sonic.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <button class="slider-button izquierda-button" onclick="moverIzquierda()"><</button>
-                <button class="slider-button derecha-button" onclick="moverDerecha()">></button>          
+            </section>
+
+            <section>
+                <div class="seccion">
+                    <p>Categorías</p>
+                </div>
+                <div class="swiper Slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias4.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias5.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias6.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias7.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="recursos/img/miniaturas/categorias8.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+
+            <section>
+                <div class="seccion">
+                    <p>Vistos recientemente</p>
+                </div>
+                <div class="swiper Slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </section>
         </div>
     </main>
     <footer>
         <p>®ReelRover 2024</p>
     </footer>
-    <script src="js/idiom.js"></script>
+    <!-- Importciones por CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Importaciones locales -->
+    <script src="js/idiom.js"></script>
     <script src="js/toastify.js"></script>    
     <script src="js/session.js"></script>
-    <script src="js/change.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/livePreview.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
