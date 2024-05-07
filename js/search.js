@@ -23,7 +23,7 @@ $(document).ready(function () {
         $('#resultados').empty();
         
         data.forEach(function (pelicula) {
-            $('#resultados').append('<p>' + pelicula.nombre + '</p>');
+            $('#resultados').append(`<a href="${pelicula.recurso}" target="_blank">${pelicula.nombre}</a>`);
         });
     }
 
