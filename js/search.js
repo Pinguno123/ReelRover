@@ -2,6 +2,7 @@ $(document).ready(function () {
     const searchInput = $('#search-input');
     let hideResultsTimeout;
     let responseData;
+    $('#resultados').hide();
 
     ajaxSearchCall();
 
@@ -23,7 +24,7 @@ $(document).ready(function () {
         $('#resultados').empty();
         
         data.forEach(function (pelicula) {
-            $('#resultados').append(`<a href="${pelicula.recurso}" target="_blank">${pelicula.nombre}</a>`);
+            $('#resultados').append(`<a href="${pelicula.recurso}" id="peliculasEnlaces" target="_blank">${pelicula.nombre}</a>`);
         });
     }
 
@@ -46,12 +47,12 @@ $(document).ready(function () {
     });
 
     searchInput.on('focus', function () {
-        $('#resultados').removeClass('d-none');
+        $('#resultados').show();
     });
 
     searchInput.on('blur', function () {
         hideResultsTimeout = setTimeout(function () {
-            $('#resultados').addClass('d-none');
+            $('#resultados').hide();
         }, 200);
     });
 
@@ -61,7 +62,7 @@ $(document).ready(function () {
 
     $(document).on('click', function(e) {
         if (!$(e.target).closest('#resultados, #search-input').length) {
-            $('#resultados').addClass('d-none');
+            $('#resultados').hide();
         }
     });    
 });

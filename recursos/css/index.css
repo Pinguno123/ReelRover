@@ -73,10 +73,6 @@ main {
     text-decoration: none;
 }
 
-.d-none {
-    display: none;
-}
-
 #contenido-principal {
     width: 100%;
     height: auto;

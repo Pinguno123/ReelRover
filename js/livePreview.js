@@ -12,7 +12,7 @@ swiperContainers.forEach(function(container) {
         container.style.transform = "scale(1.1)";
         container.style.transition = "transform 0.3s ease";
         img.style.opacity = "0";
-        video.style.opacity = "1";
+        // video.style.opacity = "1";
     });
 
     img.addEventListener("mouseout", function() {
