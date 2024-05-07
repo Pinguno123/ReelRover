@@ -6,6 +6,10 @@ $(document).ready(function () {
         cargarVideoPlayer(href);
     });
 
+    $('.swiper-slide img').on('click', function() {
+        var videoSrc = $(this).siblings('video').attr('src'); //Como video es hermano de la imagen puedo hacer esto
+        cargarVideoPlayer(videoSrc);
+    });    
 
     function cargarVideoPlayer(href) {
         var url = 'videoPlayer.php';
